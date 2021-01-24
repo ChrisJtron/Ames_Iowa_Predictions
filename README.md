@@ -1,6 +1,4 @@
-Using a competition dataset from Kaggle, I am creating a model to predict housing prices in Ames, Iowa.
-
-After a few false starts and realizing I did not know as much as I thought I did, I am starting over with a more organized approach and the aid of a book 
+Using a competition dataset from Kaggle, I am creating a model to predict housing prices in Ames, Iowa. 
 
 I will begin by thoroughly understanding the data and prepping it for models:
 
@@ -22,4 +20,5 @@ The data was then divided into Training, Validation, and Test sets.
 
 I have ruled out Linear Regression and Decision Tree models.
 A Random Forest Regressor has performed fairly well.
-The most promising model so far is an Elastic Net with Scaled Polynomial features.
+
+My best results have been achieved using stacked Gradient Boosting Regression.  I have one model that predicts fairly accurately.  I use those results as my base. I then created 3 new Gradient Boosting models for 3 price levels, up to 350K, between 350K and 500K, and over 500K.  If the  first model predicted a result below 350K, it was averaged with the new model using price level 1.  If the result from the first model predicted a price betweeen 350K and 500K, the result from the new model price level 2 was used to replace it.  Anything initially predicted over 500K was replaced with the prediction from price level 3.
