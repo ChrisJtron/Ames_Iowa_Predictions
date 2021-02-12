@@ -9,13 +9,10 @@ Some of the feature engineering performed includes:
   -Engineered new features using a combination of existing features.  Examples:
                                                                           -Neighborhood Median Value rather than just a Neighborhood's name.
                                                                           -Median Price per Square foot by Neighborhood
-  -Removed outliers with exceptionally high Sale Prices and Square Footage
   -OneHotEncoded features with string data
-  -Created a DataFrame with only numerical features after transforming many of the original features.
+  -Created a DataFrame with only numerical features after transforming many of the original features to test the accuracy of simplifiing and limiting data.
   -Scaled all the data using StandardScaler
   
-I have also created an area in my code to remove features based on their correlation (R2 values) to the target.  The R2 value can be changed to test models using data with different levels of correlation.
-
 The data was then divided into Training, Validation, and Test sets.
 
 I have ruled out Linear Regression and Decision Tree models.
